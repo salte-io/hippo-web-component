@@ -1,0 +1,95 @@
+{
+  "@type": "plugin",
+  "id": "hippo-web-component",
+  "name": "Web Component",
+  "icon": "/essentials/images/icons/wcIcon.png",
+  "introduction": "Allows W3C-compliant web components to be incorporated into your Hippo CMS site.",
+  "description": "<p>The web component plugin for Hippo allows you to pull hosted W3C-compliant web components into your hippo projects via Hippo's Channel Editor. &nbsp;Once installed, you simply select "Web Component" from the list of components displayed in the Channel Editor's side-bar and then click the content block on the page where you want to insert the web component. &nbsp;Once added, you will be asked to provide the URL, from which the component can be retrieved, and the element name. &nbsp;Then, at runtime, the component will be included on the page.</p>",
+  "imageUrls": [
+    "/essentials/images/screenshots/wcImage.png"
+  ],
+  "packageFile": "/META-INF/web_component_instructions.xml",
+  "restClasses": [],
+  "type": "feature",
+  "vendor": {
+    "@type": "vendor",
+    "name": "Salte",
+    "url": "https://www.salte.io"
+  },
+  "categories": {
+    "application": [
+      "facets",
+      "integration",
+      "web component",
+      "content"
+    ],
+    "type": [
+      "feature"
+    ],
+    "license": [
+      "community"
+    ]
+  },
+  "repositories": [
+    {
+      "id": "Local",
+      "name": "Local Maven 2 Repository",
+      "targetPom": "cms",
+      "@type": "repository",
+      "url": "http://localhost:8081/repository/maven-releases/",
+      "releases": {
+        "@type": "releases",
+        "enabled": "true",
+        "updatePolicy": "always",
+        "checksumPolicy": "fail"
+      },
+      "snapshots": {
+        "@type": "snapshots",
+        "enabled": "false"
+      },
+    },
+    {
+      "id": "Local",
+      "name": "Local Maven 2 Repository",
+      "targetPom": "site",
+      "@type": "repository",
+      "url": "http://localhost:8081/repository/maven-releases",
+      "releases": {
+        "@type": "releases",
+        "updatePolicy": "always",
+        "checksumPolicy": "fail",
+        "enabled": "false"
+      },
+      "snapshots": {
+        "@type": "snapshots",
+        "enabled": "false"
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "@type": "dependency",
+      "groupId": "io.salte",
+      "artifactId": "hippo-web-component",
+      "version": "${version}",
+      "targetPom": "cms"
+    },
+    {
+      "@type": "dependency",
+      "groupId": "io.salte",
+      "artifactId": "hippo-web-component",
+      "version": "${version}",
+      "targetPom": "site"
+    }
+  ],
+  "libraries": [
+    {
+      "items": [
+        {
+        "component": "hippo-web-component",
+        "file": "hippo-web-component.js"
+        }
+      ]
+    }
+  ]
+}

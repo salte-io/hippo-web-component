@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="web-component" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hst:containeritemcomponent</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:componentclassname" sv:type="String">
+    <sv:value>io.salte.hippo.plugins.WebComponent</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:label" sv:type="String">
+    <sv:value>Web Component</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:iconpath" sv:type="String">
+    <sv:value>images/essentials/catalog-component-icons/wcIcon.png</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:template" sv:type="String">
+    <sv:value>web-component{{templateExtension}}</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:xtype" sv:type="String">
+    <sv:value>hst.item</sv:value>
+  </sv:property>
+</sv:node>
+

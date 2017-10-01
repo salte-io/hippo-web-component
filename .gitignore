@@ -1,0 +1,4 @@
+.DS_STORE
+src/main/resources/META-INF/resources/node_modules
+target
+deploy.sh

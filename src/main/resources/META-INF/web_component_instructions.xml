@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.onehippo.org/essentials/instructions /instructions.xsd" xmlns="http://www.onehippo.org/essentials/instructions">
+  <instructionSet group="jsp">
+    <file action="copy" source="jsp/web-component.jsp" target="{{jspRoot}}/hstdefault/web-component.jsp"/>
+    <xml action="copy" source="hst/web-component-template-jsp.xml" target="/hst:hst/hst:configurations/hst:default/hst:templates"/>
+  </instructionSet>
+
+  <instructionSet group="freemarker">
+    <freemarker action="copy" source="freemarker/web-component.ftl" target="{{freemarkerRoot}}/hstdefault/web-component.ftl"/>
+    <xml action="copy" source="hst/web-component-template-freemarker.xml" target="/hst:hst/hst:configurations/hst:default/hst:templates"/>
+  </instructionSet>
+
+  <instructionSet>
+    <xml action="copy" source="hst/catalog/web-component-catalog-item.xml" target="/hst:hst/hst:configurations/hst:default/hst:catalog/essentials-catalog"/>
+    <file action="copy" binary="true" source="images/wcIcon.png" target="{{siteWebRoot}}/images/essentials/catalog-component-icons/wcIcon.png"/>
+  </instructionSet>
+</instructions>

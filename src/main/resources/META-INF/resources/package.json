@@ -1,0 +1,11 @@
+{
+  "name": "hippo-web-component",
+  "version": "1.0.0",
+  "description": "Allows W3C-compliant web component to be incorporated into your Hippo CMS site.",
+  "main": "index.js",
+  "author": "Salte",
+  "license": "MIT",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^1.0.14"
+  }
+}
