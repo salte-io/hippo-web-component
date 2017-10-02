@@ -11,6 +11,7 @@ cache:
 script:
   - (cd src/main/resources/META-INF/resources && yarn install)
   - if [ $TRAVIS_BRANCH == 'master' ] && [ -z "$TRAVIS_TAG" ] ; then export VERSION="$VERSION-SNAPSHOT" ; fi
+  - if [ ! -z "$TRAVIS_TAG" ] ; then export VERSION=$TRAVIS_TAG ; fi
   - if [ $TRAVIS_BRANCH == 'master' ] ; then mvn --quiet versions:set -DnewVersion=$VERSION ; fi
   - mvn --quiet clean verify
 
