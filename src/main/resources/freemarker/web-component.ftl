@@ -12,13 +12,13 @@
     <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <div>
       <script>
-        let link = document.createElement('link');
+        var link = document.createElement('link');
         link.rel = 'import';
         link.href = '${cparam.url}';
         document.head.appendChild(link);
-        let parentElement = document.currentScript.parentElement;
+        var parentElement = document.currentScript.parentElement;
         document.body.style.opacity = 0;
-        window.addEventListener('WebComponentsReady', () => {
+        window.addEventListener('WebComponentsReady', function() {
           document.body.style.opacity = 1;
           parentElement.innerHTML = '<${cparam.elementName}></${cparam.elementName}>';
         });

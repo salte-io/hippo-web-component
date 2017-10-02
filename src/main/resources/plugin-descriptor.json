@@ -14,7 +14,7 @@
   "vendor": {
     "@type": "vendor",
     "name": "Salte",
-    "url": "https://www.salte.io"
+    "url": "https://github.com/salte-io/hippo-web-component"
   },
   "categories": {
     "application": [
@@ -32,11 +32,11 @@
   },
   "repositories": [
     {
-      "id": "Local",
-      "name": "Local Maven 2 Repository",
+      "id": "Salte",
+      "name": "Salte Nexus Repository",
       "targetPom": "cms",
       "@type": "repository",
-      "url": "http://localhost:8081/repository/maven-releases/",
+      "url": "${maven_url_releases}",
       "releases": {
         "@type": "releases",
         "enabled": "true",
@@ -46,14 +46,14 @@
       "snapshots": {
         "@type": "snapshots",
         "enabled": "false"
-      },
+      }
     },
     {
-      "id": "Local",
-      "name": "Local Maven 2 Repository",
+      "id": "Salte",
+      "name": "Salte Nexus Repository",
       "targetPom": "site",
       "@type": "repository",
-      "url": "http://localhost:8081/repository/maven-releases",
+      "url": "${maven_url_releases}",
       "releases": {
         "@type": "releases",
         "updatePolicy": "always",

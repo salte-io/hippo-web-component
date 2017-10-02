@@ -2,13 +2,13 @@
     <servers>
         <server>
             <id>releases</id>
-            <username>${env.USERNAME}</username>
-            <password>${env.PASSWORD}</password>
+            <username>${env.maven_username}</username>
+            <password>${env.maven_password}</password>
         </server>
         <server>
             <id>snapshots</id>
-            <username>${env.USERNAME}</username>
-            <password>${env.PASSWORD}</password>
+            <username>${env.maven_username}</username>
+            <password>${env.maven_password}</password>
         </server>
     </servers>
 </settings>
