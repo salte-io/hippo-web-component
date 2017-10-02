@@ -4,7 +4,7 @@
   "name": "Web Component",
   "icon": "/essentials/images/icons/wcIcon.png",
   "introduction": "Allows W3C-compliant web components to be incorporated into your Hippo CMS site.",
-  "description": "<p>The web component plugin for Hippo allows you to pull hosted W3C-compliant web components into your hippo projects via Hippo's Channel Editor. &nbsp;Once installed, you simply select "Web Component" from the list of components displayed in the Channel Editor's side-bar and then click the content block on the page where you want to insert the web component. &nbsp;Once added, you will be asked to provide the URL, from which the component can be retrieved, and the element name. &nbsp;Then, at runtime, the component will be included on the page.</p>",
+  "description": "<p>The web component plugin for Hippo allows you to pull hosted W3C-compliant web components into your hippo projects via Hippo's Channel Editor. &nbsp;Once installed, you simply select &quot;Web Component&quot; from the list of components displayed in the Channel Editor's side-bar and then click the content block on the page where you want to insert the web component. &nbsp;Once added, you will be asked to provide the URL, from which the component can be retrieved, and the element name. &nbsp;Then, at runtime, the component will be included on the page.</p>",
   "imageUrls": [
     "/essentials/images/screenshots/wcImage.png"
   ],
