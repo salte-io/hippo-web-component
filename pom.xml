@@ -9,6 +9,33 @@
 
   <name>Web Component Loader Plugin</name>
   <description>Allows W3C Compliant Web Components to Be Surfaced in the Hippo CMS</description>
+  <url>https://github.com/salte-io/hippo-web-component</url>
+  <licenses>
+    <license>
+      <name>Apache 2.0 License</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/salte-io/hippo-web-component</url>
+    <connection>scm:git:git@github.com:salte-io/hippo-web-component.git</connection>
+    <developerConnection>scm:git:git@github.com:salte-io/hippo-web-component.git</developerConnection>
+  </scm>
+
+  <developers>
+    <developer>
+      <id>davewoodward</id>
+      <name>Dave Woodward</name>
+      <email>dave@salte.io</email>
+    </developer>
+    <developer>
+      <id>nick-woodward</id>
+      <name>Nick Woodward</name>
+      <email>nick@salte.io</email>
+    </developer>
+  </developers>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -102,6 +129,20 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.6</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.0.2</version>
         <configuration>
@@ -118,11 +159,11 @@
 
   <distributionManagement>
     <repository>
-        <id>releases</id>
+        <id>ossrh</id>
         <url>${maven_url_releases}</url>
     </repository>
     <snapshotRepository>
-        <id>snapshots</id>
+        <id>ossrh</id>
         <url>${maven_url_snapshots}</url>
     </snapshotRepository>
   </distributionManagement>

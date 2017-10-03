@@ -32,8 +32,8 @@
   },
   "repositories": [
     {
-      "id": "Salte",
-      "name": "Salte Nexus Repository",
+      "id": "ossrh",
+      "name": "Maven Central",
       "targetPom": "cms",
       "@type": "repository",
       "url": "${maven_url_releases}",
@@ -49,8 +49,8 @@
       }
     },
     {
-      "id": "Salte",
-      "name": "Salte Nexus Repository",
+      "id": "ossrh",
+      "name": "Maven Central",
       "targetPom": "site",
       "@type": "repository",
       "url": "${maven_url_releases}",
