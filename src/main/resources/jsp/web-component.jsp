@@ -15,7 +15,7 @@
   <c:otherwise>
     <c:choose>
       <c:when test="${cparam.url ne null && cparam.elementName ne null}">
-        <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+        <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
         <div>
           <script>
             var link = document.createElement('link');

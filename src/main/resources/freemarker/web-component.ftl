@@ -9,7 +9,7 @@
   </#if>
 <#else>
   <#if cparam.url?? && cparam.elementName??>
-    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <div>
       <script>
         var link = document.createElement('link');
