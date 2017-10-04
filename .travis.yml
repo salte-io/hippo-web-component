@@ -8,22 +8,23 @@ cache:
   directories:
     - $HOME/.m2
 
-install:
-  - mvn --settings .travis.settings.xml install -DskipTests=true -Dgpg.skip -Dmaven.javadoc.skip=true -B -V
-
 before_install:
+  - cp .travis.settings.xml $HOME/.m2/settings.xml
   - if [ ! -z "$GPG_SECRET_KEYS" ]; then echo $GPG_SECRET_KEYS | base64 --decode | $GPG_EXECUTABLE --import; fi
   - if [ ! -z "$GPG_OWNERTRUST" ]; then echo $GPG_OWNERTRUST | base64 --decode | $GPG_EXECUTABLE --import-ownertrust; fi
+
+install:
+  - mvn --quiet install -DskipTests=true -Dgpg.skip -Dmaven.javadoc.skip=true -B -V
 
 script:
   - (cd src/main/resources/META-INF/resources && yarn install)
   - if [ $TRAVIS_BRANCH == 'master' ] && [ -z "$TRAVIS_TAG" ] ; then export VERSION="$VERSION-SNAPSHOT" ; fi
   - if [ ! -z "$TRAVIS_TAG" ] ; then export VERSION=$TRAVIS_TAG ; fi
   - if [ $TRAVIS_BRANCH == 'master' ] ; then mvn --quiet versions:set -DnewVersion=$VERSION ; fi
-  - mvn --quiet -Dgpg.passphrase=$GPG_PASSPHRASE clean verify
+  - mvn --quiet clean verify
 
 deploy:
   - provider: script
-    script: "cp .travis.settings.xml $HOME/.m2/settings.xml && mvn --quiet deploy"
+    script: mvn --quiet deploy
     on:
       branch: master
