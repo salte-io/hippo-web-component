@@ -22,12 +22,7 @@
             link.rel = 'import';
             link.href = '${cparam.url}';
             document.head.appendChild(link);
-            var parentElement = document.currentScript.parentElement;
-            document.body.style.opacity = 0;
-            window.addEventListener('WebComponentsReady', function() {
-              document.body.style.opacity = 1;
-              parentElement.innerHTML = '<${cparam.elementName}></${cparam.elementName}>';
-            });
+            document.currentScript.parentElement.innerHTML = '<${cparam.elementName}></${cparam.elementName}>';
           </script>
         </div>
       </c:when>
