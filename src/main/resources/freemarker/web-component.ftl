@@ -13,6 +13,7 @@
       var onload = function() {
         if (!document.getElementById('${cparam.elementName}')) {
           var link = document.createElement('link');
+          link.id = '${cparam.elementName}';
           link.rel = 'import';
           link.href = '${cparam.url}';
           document.head.appendChild(link);
