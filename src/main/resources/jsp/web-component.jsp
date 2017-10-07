@@ -15,16 +15,29 @@
   <c:otherwise>
     <c:choose>
       <c:when test="${cparam.url ne null && cparam.elementName ne null}">
-        <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-        <div>
-          <script>
-            var link = document.createElement('link');
-            link.rel = 'import';
-            link.href = '${cparam.url}';
-            document.head.appendChild(link);
-            document.currentScript.parentElement.innerHTML = '<${cparam.elementName}></${cparam.elementName}>';
-          </script>
-        </div>
+        <script>
+          var onload = function() {
+            if (!document.getElementById('${cparam.elementName}')) {
+              var link = document.createElement('link');
+              link.id = '${cparam.elementName}';
+              link.rel = 'import';
+              link.href = '${cparam.url}';
+              document.head.appendChild(link);
+            }
+          }
+
+          if (document.getElementById('webcomponents-loader')) {
+            onload();
+          } else {
+            var script = document.createElement('script');
+            script.id = 'webcomponents-loader';
+            script.async = true;
+            script.src = './node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js';
+            script.onload = onload;
+            document.head.appendChild(script);
+          }
+        </script>
+        <${cparam.elementName}></${cparam.elementName}>
       </c:when>
       <c:otherwise>
         <div>
