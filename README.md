@@ -1,4 +1,7 @@
 # Hippo Web Component Plugin
+
+[![Travis][https://img.shields.io/travis/com/salte-io/hippo-web-component/master.svg?style=flat]][https://travis-ci.com/salte-io/hippo-web-component]
+
 ## Overview
 The Hippo Web Component Plugin allows you to include externally hosted W3C web components in your Hippo CMS implementation.
 
