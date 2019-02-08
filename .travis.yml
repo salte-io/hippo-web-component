@@ -8,6 +8,10 @@ cache:
   directories:
     - $HOME/.m2
 
+branches:
+  only:
+    - master
+    
 before_install:
   - cp .travis.settings.xml $HOME/.m2/settings.xml
   - if [ ! -z "$GPG_SECRET_KEYS" ]; then echo $GPG_SECRET_KEYS | base64 --decode | $GPG_EXECUTABLE --import; fi
