@@ -11,6 +11,7 @@ cache:
 branches:
   only:
     - master
+    - /^greenkeeper/.*$/
     
 before_install:
   - cp .travis.settings.xml $HOME/.m2/settings.xml
