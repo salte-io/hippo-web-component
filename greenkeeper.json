@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "src/main/resources/META-INF/resources/package.json"
+      ]
+    }
+  }
+}
