@@ -1,5 +1,7 @@
 # Hippo Web Component Plugin
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/salte-io/hippo-web-component.svg)](https://greenkeeper.io/)
+
 [![Travis][https://img.shields.io/travis/com/salte-io/hippo-web-component/master.svg?style=flat]][https://travis-ci.com/salte-io/hippo-web-component]
 
 ## Overview
